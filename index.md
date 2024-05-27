@@ -1,5 +1,5 @@
-Here you can say lots of fun things about your site.
+HI, I am a programmer who loves to play with data, other hobbies are being around by nature, sports, reading and nice food.  
 
-Maybe say a some things about yourself.
+Currently I am living in the Netherlands, definitely will share a bit of that as well.
 
-Or maybe what you plan to blog about.
+so this blog is bascially about what attracts me and tech topics.
