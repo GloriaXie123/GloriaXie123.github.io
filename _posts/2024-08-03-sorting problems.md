@@ -5,7 +5,7 @@ We want to sort collections of data of different types, that means we want our a
 
 In java for all types of data we include **comparable** interface in their class method, all the **comparable** interface has to implement the **comapreTo** method.
 
-the **Binary Relationship<=** method has to follow several natural rules:
+the **Binary Relationship <=** has to follow several natural rules:
 
 Antisymmetry;
 
