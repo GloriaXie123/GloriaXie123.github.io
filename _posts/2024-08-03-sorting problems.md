@@ -15,7 +15,7 @@ totality;
 
 ### Elementary sorting algorithm
 
-1）Selection sort, each selection round takes O(n) time complexity.
+1) Selection sort, each selection round takes O(n) time complexity.
 
 2) Insertion sort, move entries only once a time.
 
