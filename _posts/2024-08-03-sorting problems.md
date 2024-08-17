@@ -19,7 +19,7 @@ totality;
 
 2) Insertion sort, move entries only once a time.
 
-3) Shell sort, move entries more than one positions at a time.
+3) Shell sort, move entries more than one position at a time.
 
 
 
