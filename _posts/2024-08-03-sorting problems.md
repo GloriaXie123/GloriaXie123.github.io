@@ -27,7 +27,15 @@ totality;
 
 Using **Knuth's shuffling** to shuffle a deck of poker cards.
 
+Implementation of **Knuth's shuffling**:
+
+In ith iteration, pick a random number r between 0 and i, and then swap ith entry and rth entry.
+
+### Randomness is important
+
 there is a quote " the generation of randomness is too important to be left to chance".
+
+
 
 
 
