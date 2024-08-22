@@ -21,6 +21,14 @@ totality;
 
 3) Shell sort, move entries more than one position at a time, that's how it gives efficiency.
 
+### Application of sorting
+
+#### Shuffle
+
+Using **Knuth's shuffling** to shuffle a deck of poker cards.
+
+there is a quote " the generation of randomness is too important to be left to chance".
+
 
 
 
