@@ -9,11 +9,11 @@ the **binary relation <=** has to satisfy:
 
 Antisymmetry;
 
-transitivity;
+Transitivity;
 
-totality;
+Totality;
 
-### Elementary sorting algorithm
+### Elementary sorting algorithms
 
 1) Selection sort, each selection round takes O(n) time complexity.
 
@@ -34,6 +34,10 @@ In ith iteration, pick a random number r between 0 and i, and then swap ith entr
 #### Randomness is important
 
 there is a quote " the generation of randomness is too important to be left to chance".
+
+### Merge sort and Quick sort
+
+These two algorithms are classic sorting algorithms, they take at most nlgn compares.
 
 
 
