@@ -40,6 +40,9 @@ there is a quote " the generation of randomness is too important to be left to c
 These two algorithms are classic sorting algorithms, they take at most nlgn compares.
 
 
+By comparing the efficiency of different algorithms, we realize that good algorithms are much better than spending a lot of time and money to use a bad one.
+
+
 
 
 
