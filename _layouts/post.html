@@ -4,6 +4,9 @@ layout: default
 <link href="/css/override.css" rel="stylesheet" type="text/css">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
+  <!-- Debugging: Print visibility status -->
+  <p>Visibility: {{ page.visible }}</p>
+  
   <!-- Check if the post is visible -->
   {% if post.visible %}
   
