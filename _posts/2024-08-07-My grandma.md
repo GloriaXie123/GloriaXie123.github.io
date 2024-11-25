@@ -1,3 +1,7 @@
+---
+visible: true
+---
+
 Looking at the photoes on the photo wall, I realized this woman, my grandma, she has such a strong will to live.
 
 So many times I thought she will be defeated, but she didn't. This time, I don't know if it will be the end.
