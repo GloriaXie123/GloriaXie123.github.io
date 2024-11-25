@@ -1,5 +1,5 @@
 ---
-visible: true
+visible: false
 ---
 
 Looking at the photoes on the photo wall, I realized this woman, my grandma, she has such a strong will to live.
