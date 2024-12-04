@@ -1,8 +1,7 @@
 ---
 layout: default
 ---
- <!-- Check if the post is visible -->
-  {% if post.visible %}
+
 <link href="/css/override.css" rel="stylesheet" type="text/css">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   
@@ -31,5 +30,3 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
   
 </article>
-
- {% endif %} <!-- End of visibility check -->
