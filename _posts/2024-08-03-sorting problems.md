@@ -1,7 +1,3 @@
----
-visible: true
----
-
 ## Sorting problems
 
 ### The rules for sorting
