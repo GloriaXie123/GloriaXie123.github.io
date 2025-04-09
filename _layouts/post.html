@@ -18,6 +18,15 @@ layout: default
       {%- endif -%}</p>
   </header>
 
+  {% if page.tags %}
+  <p><strong>Tags:</strong>
+    {% for tag in page.tags %}
+      <a href="/tag/{{ tag | downcase | replace: ' ', '-' }}/" class="tag-label">{{ tag }}</a>
+    {% endfor %}
+  </p>
+  {% endif %}
+
+
   <div class="share-links">
     {% include sharelinks.html %}
   </div>
