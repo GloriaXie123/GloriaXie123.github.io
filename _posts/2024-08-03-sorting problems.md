@@ -1,8 +1,3 @@
----
-tags: [Algorithm]
----
-
-
 ## Sorting problems
 
 ### The rules for sorting
