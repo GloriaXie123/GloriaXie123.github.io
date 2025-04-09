@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Algorithm]
+tags: [Algorithm,]
 ---
 
 ## Sorting problems
