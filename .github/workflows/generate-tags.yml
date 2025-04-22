@@ -2,14 +2,14 @@ name: Generate Tag Pages
 
 on:
   push:
-    branches: [ main ]  # or your default branch
+    branches: [ main ]  # or replace with your default branch
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repo
       uses: actions/checkout@v3
 
     - name: Set up Ruby
@@ -17,17 +17,18 @@ jobs:
       with:
         ruby-version: '3.1'
 
-    - name: Run generate_tags.rb
+    - name: Run tag generator script
       run: ruby generate_tags.rb
 
     - name: Commit & push tag pages
       env:
-        GH_TOKEN: ${{ secrets.GH_PAT }}
+        GH_PAT: ${{ secrets.GH_PAT }}
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
+        git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
         git add tag/
         git commit -m "Auto-generate tag pages" || echo "No changes to commit"
-        git push
+        git push origin HEAD:main
+
 
