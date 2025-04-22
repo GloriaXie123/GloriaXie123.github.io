@@ -21,9 +21,13 @@ jobs:
       run: ruby generate_tags.rb
 
     - name: Commit & push tag pages
+      env:
+        GH_TOKEN: ${{ secrets.GH_PAT }}
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
+        git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
         git add tag/
         git commit -m "Auto-generate tag pages" || echo "No changes to commit"
         git push
+
