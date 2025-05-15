@@ -3,8 +3,6 @@ layout: default
 ---
 
 <div class="tag-page">
-  <h1>Posts tagged with "{{ page.tag }}"</h1>
-  
   <div class="post-list">
     {% for post in site.tags[page.tag] %}
       <article class="post-item">
