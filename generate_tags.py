@@ -1,37 +1,44 @@
+#!/usr/bin/env python3
 import os
 import yaml
+import glob
 
-POSTS_DIR = "_posts"
-TAGS_DIR = "tags"
-LAYOUT = "tag"
-
-if not os.path.exists(TAGS_DIR):
-    os.mkdir(TAGS_DIR)
-
-all_tags = set()
-
-for filename in os.listdir(POSTS_DIR):
-    if filename.endswith(".md"):
-        with open(os.path.join(POSTS_DIR, filename), 'r', encoding='utf-8') as f:
-            front_matter = []
-            lines = f.readlines()
-            if lines[0].strip() == "---":
-                for line in lines[1:]:
-                    if line.strip() == "---":
-                        break
-                    front_matter.append(line)
-            data = yaml.safe_load("".join(front_matter))
-            if data and "tags" in data:
-                all_tags.update(data["tags"])
-
-for tag in all_tags:
-    tag_slug = tag.lower().replace(" ", "-")
-    tag_file = os.path.join(TAGS_DIR, f"{tag_slug}.md")
-    if not os.path.exists(tag_file):
-        with open(tag_file, 'w', encoding='utf-8') as f:
-            f.write(f"""---
+def generate_tag_pages():
+    # Create tags directory if it doesn't exist
+    if not os.path.exists('tags'):
+        os.makedirs('tags')
+    
+    # Get all posts
+    posts = glob.glob('_posts/*.md')
+    
+    # Collect all tags
+    all_tags = set()
+    for post in posts:
+        with open(post, 'r', encoding='utf-8') as f:
+            content = f.read()
+            if '---' in content:
+                front_matter = content.split('---')[1]
+                try:
+                    metadata = yaml.safe_load(front_matter)
+                    if metadata and 'tags' in metadata:
+                        all_tags.update(metadata['tags'])
+                except yaml.YAMLError:
+                    continue
+    
+    # Generate tag pages
+    for tag in all_tags:
+        tag_filename = tag.lower().replace(' ', '-')
+        tag_path = os.path.join('tags', f'{tag_filename}.md')
+        
+        if not os.path.exists(tag_path):
+            with open(tag_path, 'w', encoding='utf-8') as f:
+                f.write(f'''---
 layout: tag
+title: {tag}
 tag: {tag}
-permalink: /tag/{tag_slug}/
----""")
+---
+''')
+            print(f'Generated tag page for: {tag}')
 
+if __name__ == '__main__':
+    generate_tag_pages() 

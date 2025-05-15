@@ -2,9 +2,24 @@
 layout: default
 ---
 
-<h1>Tag: {{ page.tag }}</h1>
-<ul>
-  {% for post in site.tags[page.tag] %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}</li>
-  {% endfor %}
-</ul>
+<div class="tag-page">
+  <h1>Posts tagged with "{{ page.tag }}"</h1>
+  
+  <div class="post-list">
+    {% for post in site.tags[page.tag] %}
+      <article class="post-item">
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <div class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </time>
+        </div>
+        {% if post.excerpt %}
+          <div class="post-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 50 }}
+          </div>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</div>
