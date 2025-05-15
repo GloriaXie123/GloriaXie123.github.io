@@ -32,6 +32,6 @@ for tag in all_tags:
             f.write(f"""---
 layout: tag
 tag: {tag}
-permalink: /tags/{tag_slug}/
+permalink: /tag/{tag_slug}/
 ---""")
 
