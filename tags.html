@@ -8,7 +8,7 @@ title: Tags
   {% assign sorted_tags = site.tags | sort %}
   {% for tag in sorted_tags %}
     <li>
-      <a href="/tags/{{ tag[0] | downcase | replace: ' ', '-' }}/">
+      <a href="/tag/{{ tag[0] | downcase | replace: ' ', '-' }}/">
         {{ tag[0] }} ({{ tag[1].size }})
       </a>
     </li>
