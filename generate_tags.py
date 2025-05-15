@@ -4,9 +4,9 @@ import yaml
 import glob
 
 def generate_tag_pages():
-    # Create tags directory if it doesn't exist
-    if not os.path.exists('tags'):
-        os.makedirs('tags')
+    # Create tag directory if it doesn't exist
+    if not os.path.exists('tag'):
+        os.makedirs('tag')
     
     # Get all posts
     posts = glob.glob('_posts/*.md')
@@ -28,7 +28,7 @@ def generate_tag_pages():
     # Generate tag pages
     for tag in all_tags:
         tag_filename = tag.lower().replace(' ', '-')
-        tag_path = os.path.join('tags', f'{tag_filename}.md')
+        tag_path = os.path.join('tag', f'{tag_filename}.md')
         
         if not os.path.exists(tag_path):
             with open(tag_path, 'w', encoding='utf-8') as f:
@@ -36,6 +36,7 @@ def generate_tag_pages():
 layout: tag
 title: {tag}
 tag: {tag}
+permalink: /tag/{tag_filename}/
 ---
 ''')
             print(f'Generated tag page for: {tag}')

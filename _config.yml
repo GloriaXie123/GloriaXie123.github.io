@@ -2,6 +2,10 @@ title: "Gloria's mumbling"
 author: "Gloria Xie"
 description: "it's a blog of a little bit of everything, to share and to connect." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 
+# Base URL configuration
+baseurl: "" # Leave this empty if you're using a custom domain
+url: "https://gloriaxie123.github.io" # Replace with your actual GitHub Pages URL
+
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
 #email: ""
