@@ -98,14 +98,21 @@ hr {
   border-right: 1px solid #eee;
 }
 
+.tags-heading {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 1em;
+}
+
 .tag-group {
-  margin-bottom: 0.8em;
+  margin-bottom: 1.5em;
 }
 
 .tag-name {
   font-weight: bold;
   color: #333;
   font-size: 1.1em;
+  margin-bottom: 0.5em;
 }
 
 .tag-posts {
@@ -119,6 +126,16 @@ hr {
   color: #666;
   margin-bottom: 0.3em;
   line-height: 1.4;
+}
+
+.tag-posts a {
+  color: #666;
+  text-decoration: none;
+}
+
+.tag-posts a:hover {
+  color: #333;
+  text-decoration: underline;
 }
 
 /* Remove old tag styles */
