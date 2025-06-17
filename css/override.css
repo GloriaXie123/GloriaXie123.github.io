@@ -85,3 +85,43 @@ hr {
   background-color: #e0e0e0;
   text-decoration: none;
 }
+
+/* Archive Page Styles */
+.archive-container {
+  display: flex;
+  margin-top: 2em;
+}
+
+.tags-sidebar {
+  width: 300px;
+  padding-right: 2em;
+  border-right: 1px solid #eee;
+}
+
+.tag-group {
+  margin-bottom: 0.8em;
+}
+
+.tag-name {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.tag-posts {
+  list-style: none;
+  padding-left: 1em;
+  margin: 0;
+}
+
+.tag-posts li {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 0.3em;
+  line-height: 1.4;
+}
+
+/* Remove old tag styles */
+.tag-cloud, .tag-link {
+  display: none;
+}
