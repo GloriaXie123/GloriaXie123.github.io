@@ -44,3 +44,11 @@ defaults:
       type: post
     values:
     
+  - scope:
+      path: "tags.html"
+    values:
+      layout: default
+      exclude_from_nav: true
+
+exclude:
+  - tag
